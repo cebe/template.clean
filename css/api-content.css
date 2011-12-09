@@ -25,6 +25,10 @@ h1.file {
     border-bottom: 1px solid silver;
 }
 
+h3 {
+    border-bottom: solid 1px #cccccc;
+}
+
 #file-nav-box
 {
     position:         fixed;
@@ -39,7 +43,7 @@ h1.file {
 }
 
 #file-nav-options {
-    float: right;
+    /*float: right;*/
     border-bottom: 1px solid #e9e9e9;
     border-left: 1px solid #e9e9e9;
     border-bottom-left-radius: 5px;
@@ -213,10 +217,16 @@ div.method code, div.constant code
     margin-right: 5px;
 }
 
-div.long-description {
+div.class p.short-description {
     font-size: 1.0em;
     padding: 5px;
     background: #f9f9f9;
+    margin-bottom: 0em;
+}
+
+div.long-description {
+    font-size: 1.0em;
+    padding: 5px;
 }
 
 div.long-description p {
@@ -348,6 +358,10 @@ div.api-section h4, div.api-section h5 {
 
 div.clear {
     clear: left;
+}
+
+div.file {
+    margin-left: 25px;
 }
 
 div.class {

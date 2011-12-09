@@ -10,17 +10,17 @@
     <transformation query="copy" writer="FileIo" source="../data/js" artifact="js"/>
     <transformation query="copy" writer="FileIo" source="../data/syntax_highlighter" artifact="syntax_highlighter"/>
     <transformation query="copy" writer="FileIo" source="../data/images" artifact="images"/>
-    <transformation query="copy" writer="FileIo" source="themes/default/css" artifact="css"/>
-    <transformation query="copy" writer="FileIo" source="themes/default/images" artifact="images"/>
+    <transformation query="copy" writer="FileIo" source="templates/clean/css" artifact="css"/>
+    <transformation query="copy" writer="FileIo" source="templates/clean/images" artifact="images"/>
     <transformation query="" writer="Search" source="" artifact="."/>
-    <transformation query="" writer="xsl" source="themes/default/index.xsl" artifact="index.html"/>
-    <transformation query="" writer="xsl" source="themes/default/content.xsl" artifact="content.html"/>
-    <transformation query="" writer="xsl" source="themes/default/sidebar.xsl" artifact="nav.html"/>
-    <transformation query="" writer="xsl" source="themes/default/graph_class.xsl" artifact="graph.html"/>
-    <transformation query="/project/file/@path" writer="xsl" source="themes/default/api-doc.xsl" artifact="{$path}"/>
-    <transformation query="" writer="xsl" source="themes/default/report_markers.xsl" artifact="report_markers.html"/>
-    <transformation query="" writer="xsl" source="themes/default/report_parse_markers.xsl" artifact="report_parse_markers.html"/>
-    <transformation query="" writer="xsl" source="themes/default/report_deprecated.xsl" artifact="report_deprecated.html"/>
+    <transformation query="" writer="xsl" source="templates/clean/index.xsl" artifact="index.html"/>
+    <transformation query="" writer="xsl" source="templates/clean/content.xsl" artifact="content.html"/>
+    <!--transformation query="" writer="xsl" source="templates/clean/sidebar.xsl" artifact="nav.html"/-->
+    <transformation query="" writer="xsl" source="templates/clean/graph_class.xsl" artifact="graph.html"/>
+    <transformation query="/project/file/@path" writer="xsl" source="templates/clean/api-doc.xsl" artifact="{$path}"/>
+    <transformation query="" writer="xsl" source="templates/clean/report_markers.xsl" artifact="report_markers.html"/>
+    <transformation query="" writer="xsl" source="templates/clean/report_parse_markers.xsl" artifact="report_parse_markers.html"/>
+    <transformation query="" writer="xsl" source="templates/clean/report_deprecated.xsl" artifact="report_deprecated.html"/>
     <transformation query="" writer="sourcecode" source="" artifact=""/>
     <transformation query="" writer="Graph" source="Class" artifact="classes.svg" />
   </transformations>

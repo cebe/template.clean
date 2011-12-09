@@ -9,21 +9,34 @@ body
     font: 80% / 1.5em Arial, Helvetica, "DejaVu Sans", "Liberation sans", "Bitstream Vera Sans", sans-serif
 }
 
+#main {
+    width: 100%;
+    margin: auto;
+}
+
 #db-header, #menubar
 {
   height: 1px;
 }
 
 #contents {
-    margin-left: 260px;
+    /*float: right;*/
+    /* width: 750px;*/
+    margin-left: 250px;
+    padding:  0;
+
 }
 
 #sidebar {
+    position: fixed;
+    float: left;
+    width: 250px;
     height: 100%;
-    width: 100%;
     background: #232325;
     overflow: auto;
-    color: #f9f9ff
+    color: #f9f9ff;
+    margin: 0;
+    padding:  0;
 }
 
 #sidebar-header {

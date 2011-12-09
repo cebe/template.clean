@@ -70,12 +70,13 @@
 
       ]]>
     </script>
-      <h1 class="file">
-          <xsl:value-of select="@path" />
-          <xsl:if test="source">
-            <a href="{$root}source/{@path}.html"><img src="{$root}images/icons/view_source.png" border="0"/></a>
-          </xsl:if>
-      </h1>
+    <h1 class="file">
+        <xsl:value-of select="@path" />
+        <xsl:if test="source">
+          <a href="{$root}source/{@path}.html"><img src="{$root}images/icons/view_source.png" border="0"/></a>
+        </xsl:if>
+    </h1>
+    <div class="file">
       <div id="file-nav-box">
           <div id="file-nav-options">
               Show:
@@ -156,38 +157,38 @@
       </dl>
       </xsl:if>
 
-    <xsl:if test="count(constant) > 0">
-    <a name="constants" class="anchor" />
-    <h2>Constants</h2>
-    <div>
-      <xsl:apply-templates select="constant"/>
-    </div>
-    </xsl:if>
+      <xsl:if test="count(constant) > 0">
+      <a name="constants" class="anchor" />
+      <h2>Constants</h2>
+      <div>
+        <xsl:apply-templates select="constant"/>
+      </div>
+      </xsl:if>
 
-    <xsl:if test="count(function) > 0">
-    <a name="functions" class="anchor" />
-    <h2>Functions</h2>
-    <div>
-      <xsl:apply-templates select="function">
+      <xsl:if test="count(function) > 0">
+      <a name="functions" class="anchor" />
+      <h2>Functions</h2>
+      <div>
+        <xsl:apply-templates select="function">
+          <xsl:sort select="name" />
+        </xsl:apply-templates>
+      </div>
+      </xsl:if>
+
+      <xsl:if test="count(class) > 0">
+      <a name="classes" class="anchor" />
+      <xsl:apply-templates select="class">
         <xsl:sort select="name" />
       </xsl:apply-templates>
+      </xsl:if>
+
+      <xsl:if test="count(interface) > 0">
+      <a name="interfaces" class="anchor" />
+      <xsl:apply-templates select="interface">
+        <xsl:sort select="name" />
+      </xsl:apply-templates>
+      </xsl:if>
     </div>
-    </xsl:if>
-
-    <xsl:if test="count(class) > 0">
-    <a name="classes" class="anchor" />
-    <xsl:apply-templates select="class">
-      <xsl:sort select="name" />
-    </xsl:apply-templates>
-    </xsl:if>
-
-    <xsl:if test="count(interface) > 0">
-    <a name="interfaces" class="anchor" />
-    <xsl:apply-templates select="interface">
-      <xsl:sort select="name" />
-    </xsl:apply-templates>
-    </xsl:if>
-
   </xsl:template>
 
 </xsl:stylesheet>

@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
-
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output indent="yes" method="html" />
+  <xsl:include href="menubar.xsl" />
+  <xsl:include href="nav.xsl" />
+  <!--xsl:include href="search/ajax.xsl" /-->
 
   <!-- Concatenate items with a given separator: http://symphony-cms.com/download/xslt-utilities/view/22517/-->
   <xsl:template name="implode">
@@ -53,10 +55,27 @@
             });
         </script>
       </head>
-      <body>
+      <body class="chrome">
+        <div id="main">
+          <!--h1>
+            <xsl:if test="/project/@title != ''">
+              <span><xsl:value-of select="/project/@title" disable-output-escaping="yes" /></span>
+             </xsl:if>
+            <xsl:if test="/project/@title = ''">
+              <div class="docblox"><img src="{$root}images/logo.png" /></div>
+            </xsl:if>
+          </h1-->
 
-        <xsl:apply-templates />
-
+          <!--xsl:call-template name="search"/>
+          <div id="menubar">
+            <xsl:call-template name="menubar" />
+          </div>
+          -->
+          <xsl:call-template name="nav" />
+          <div id="contents">
+            <xsl:apply-templates />
+          </div>
+        </div>
       </body>
     </html>
   </xsl:template>
