@@ -30,6 +30,10 @@ body
     background: #fff;
 }
 
+.content {
+    margin-left: 25px;
+}
+
 #sidebar {
     position: fixed;
     float: left;
@@ -40,6 +44,7 @@ body
     color: #090900;
     margin: 0;
     padding:  0;
+    border-right: solid 1px #000;
 }
 
 #sidebar-header {
