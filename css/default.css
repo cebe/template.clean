@@ -6,12 +6,15 @@ html, body, #page
 
 body
 {
-    font: 80% / 1.5em Arial, Helvetica, "DejaVu Sans", "Liberation sans", "Bitstream Vera Sans", sans-serif
+    font: 80% / 1.5em Arial, Helvetica, "DejaVu Sans", "Liberation sans", "Bitstream Vera Sans", sans-serif;
+    background: #ccc;
 }
 
 #main {
-    width: 100%;
+    width: 1280px;
     margin: auto;
+    background: #fff;
+    height: 100%;
 }
 
 #db-header, #menubar
@@ -24,7 +27,7 @@ body
     /* width: 750px;*/
     margin-left: 250px;
     padding:  0;
-
+    background: #fff;
 }
 
 #sidebar {
@@ -32,9 +35,9 @@ body
     float: left;
     width: 250px;
     height: 100%;
-    background: #232325;
+    background: #fff;
     overflow: auto;
-    color: #f9f9ff;
+    color: #090900;
     margin: 0;
     padding:  0;
 }
@@ -169,7 +172,7 @@ body
 
 ul#menu
 {
-  background:         black;
+  background:         #fff;
   display:            block;
   height:             34px;
   line-height:        22px;
