@@ -1,3 +1,6 @@
+clean DocBlox Template ![Project status](http://stillmaintained.com/cebe/template.clean.png)
+======================
+
 This Docblox template was created to offer a clean and tidy view for your documentation with less javascript fancyness and better usablility.
 
 How to use
